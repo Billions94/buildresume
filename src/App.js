@@ -8,27 +8,20 @@
   import FunLogin from './components/home/Funlogin';
   //import Switch from "react-bootstrap/esm/Switch"
   import {useNavigate} from "react-router-dom"
+import Default from "./components/home/Funlogin"
+
   function App() {
+
      return (
-
       <>
-
       <BrowserRouter>
         <Routes>
-        <Route path="/"
-          element ={<Home/>}
-          />
-          <Route path='/login' element={<Login navigation={navigation}/>}/>
-        <Route path="/profile" render={(props)=>(<>
-          <Testing {...props}/>
-        </>)} />
-        
+        <Route path="/" element ={<Home/>}/>
+          <Route path='/login' element={<Default />}/>
+        <Route path="/profile" element={<Testing />}/>
         </Routes>
-      
       </BrowserRouter>
       </>
-      
-      
     );
   }
 
